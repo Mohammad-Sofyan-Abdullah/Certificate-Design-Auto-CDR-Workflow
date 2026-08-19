@@ -43,10 +43,13 @@ docker run -p 3000:80 spectrum-leaving-certificate
 
 ## Deploy to Vercel
 
-No CI config is needed — Vercel auto-detects Next.js and rebuilds on every push.
+No config file is needed — Vercel auto-detects Next.js, including the
+`output: 'export'` static build, and rebuilds on every push.
 
 1. Go to https://vercel.com/new and import this GitHub repo.
-2. Vercel reads `vercel.json` (framework: Next.js, static export to `out/`) automatically — leave the defaults and click **Deploy**.
+2. Leave every setting on its default (do **not** override the Output
+   Directory — Vercel's Next.js builder needs to manage that itself
+   even in static-export mode) and click **Deploy**.
 3. Every push to `main` redeploys automatically.
 
 ## Notes
