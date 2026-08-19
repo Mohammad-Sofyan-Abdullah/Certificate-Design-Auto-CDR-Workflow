@@ -41,6 +41,14 @@ docker build -t spectrum-leaving-certificate .
 docker run -p 3000:80 spectrum-leaving-certificate
 ```
 
+## Deploy to Vercel
+
+No CI config is needed — Vercel auto-detects Next.js and rebuilds on every push.
+
+1. Go to https://vercel.com/new and import this GitHub repo.
+2. Vercel reads `vercel.json` (framework: Next.js, static export to `out/`) automatically — leave the defaults and click **Deploy**.
+3. Every push to `main` redeploys automatically.
+
 ## Notes
 
 - The certificate is drawn on an HTML canvas over `public/certificate-base.png`
